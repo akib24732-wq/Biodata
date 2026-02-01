@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -104,12 +105,9 @@ body {
     border: 2px solid #000;
     background-color: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
-    cursor: pointer;
 }
 
 .profile-photo {
@@ -118,36 +116,12 @@ body {
     object-fit: cover;
 }
 
-.photo-upload-input {
-    display: none;
-}
-
-.photo-upload-label {
-    position: absolute;
-    bottom: 5px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 8px;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 3px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.photo-placeholder:hover .photo-upload-label {
-    opacity: 1;
-}
-
-/* Form Styles */
-.form-row {
+.info-row {
     display: grid;
     grid-template-columns: 120px 20px 1fr;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 15px;
     line-height: 1.4;
-    align-items: center;
-    gap: 10px;
 }
 
 .label {
@@ -157,65 +131,10 @@ body {
 
 .colon {
     text-align: center;
-    min-width: 20px;
 }
 
-.input-field,
-select {
-    padding: 8px 10px;
-    border: 1px solid #999;
-    background-color: #fff;
-    font-family: 'Times New Roman', serif;
-    font-size: 14px;
+.value {
     color: #000;
-}
-
-.input-field:focus,
-select:focus {
-    outline: none;
-    border-color: #333;
-    background-color: #fffbf0;
-}
-
-.input-field::placeholder {
-    color: #999;
-}
-
-/* Form Buttons */
-.form-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.btn-submit,
-.btn-reset {
-    padding: 10px 30px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid #000;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    font-family: 'Times New Roman', serif;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-}
-
-.btn-submit:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-.btn-reset:hover {
-    background-color: #ddd;
-}
-
-.btn-submit:active,
-.btn-reset:active {
-    transform: scale(0.98);
 }
 
 @media print {
@@ -226,10 +145,6 @@ select:focus {
     
     .biodata-container {
         max-width: 100%;
-    }
-    
-    .form-buttons {
-        display: none;
     }
 }
 
@@ -253,7 +168,7 @@ select:focus {
         margin-bottom: 20px;
     }
     
-    .form-row {
+    .info-row {
         grid-template-columns: 100px 15px 1fr;
         font-size: 14px;
     }
